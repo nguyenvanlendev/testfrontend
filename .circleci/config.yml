@@ -2,12 +2,13 @@ version: 2.1
 
 orbs:
   docker: circleci/docker@2.4.0
-
+  node: circleci/node@3.0.0 
 
 jobs:
   build:
-    docker:
-      - image: node:16.17.1-alpine3.16  # Use an appropriate Node.js version
+    #docker:
+    #  - image: node:16.17.1-alpine3.16  
+      # Use an appropriate Node.js version
     steps:
       - checkout  # Check out your source code
       - run:
