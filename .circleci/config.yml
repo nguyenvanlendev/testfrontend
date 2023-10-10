@@ -1,6 +1,6 @@
 version: 2.1
 jobs:
-  build_test:
+  build_dependencies:
     docker:
       - image: circleci/node:12
     steps:
@@ -24,7 +24,7 @@ jobs:
             docker push lennguyen03/react-cicd-test:latest
 
 workflows:
-  build_test:
+  build_dependencies:
     jobs:
-      - build_test
+      - build_dependencies
       - build_docker_image
