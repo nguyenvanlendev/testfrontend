@@ -4,11 +4,7 @@ orbs:
   node: circleci/node@5.1.0
   docker: circleci/docker@1.4.0
 
-jobs:
-  install-dependency:
-      - run:
-          name: Install dependencies
-          command: npm install -g npm@8.15.0 && npm install --force     
+jobs:   
   build-and-push:
     environment:
       DOCKER_IMAGE: lennguyen03/react-docker
