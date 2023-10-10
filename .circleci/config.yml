@@ -14,8 +14,9 @@ jobs:
           name: Build React app
           command: npm run build
 
-      - setup_remote_docker:
-          version: 20.10.8  # Specify the Docker version you want to use
+      # - setup_remote_docker:
+      #     version: 20.10.8  
+          # Specify the Docker version you want to use
 
       - run:
           name: Build Docker image
