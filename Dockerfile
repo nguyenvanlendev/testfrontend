@@ -1,19 +1,19 @@
-#Step 1 define OS and NodeJS Enviroment
-FROM node:18
-#Step 2 Set working folder in container
-WORKDIR /app
-# Copy package.json
-COPY package*.json ./
-# Install project Dependency
-RUN npm install -g npm@10.1.0 && npm install --force
-# Copy all project
-COPY . .
-# Build react application
-RUN npm run build
-# Expose port reactapp run
-EXPOSE 3000
-# start react app 
-CMD [ "npm", "start" ]
+# #Step 1 define OS and NodeJS Enviroment
+# FROM node:18
+# #Step 2 Set working folder in container
+# WORKDIR /app
+# # Copy package.json
+# COPY package*.json ./
+# # Install project Dependency
+# RUN npm install -g npm@10.1.0 && npm install --force
+# # Copy all project
+# COPY . .
+# # Build react application
+# RUN npm run build
+# # Expose port reactapp run
+# EXPOSE 3000
+# # start react app 
+# CMD [ "npm", "start" ]
 
 
 
