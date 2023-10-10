@@ -8,9 +8,7 @@ jobs:
   install-dependency:
       - run:
           name: Install dependencies
-          command: npm install -g npm@8.15.0 && npm install --force
-      
-
+          command: npm install -g npm@8.15.0 && npm install --force     
   build-and-push:
     environment:
       DOCKER_IMAGE: lennguyen03/react-docker
@@ -19,6 +17,11 @@ jobs:
     steps:
       - setup_remote_docker
       - checkout
+
+      - run:
+          name: Install dependencies
+          command: npm install -g npm@8.15.0 && npm install --force
+
       - docker/check:
           docker-username: DOCKER_USER
           docker-password: DOCKER_PASSWORD
