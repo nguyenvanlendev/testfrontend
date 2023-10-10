@@ -11,7 +11,7 @@ jobs:
     environment:
       DOCKER_IMAGE: lennguyen03/react-docker
       DOCKER_TAG: latest
-    executor: docker/docker
+    executor: docker/default
     steps:
       - setup_remote_docker
       - checkout
@@ -33,7 +33,7 @@ jobs:
           command: |
             echo "Digest is: $(</tmp/digest.txt)"
   deploy:
-    executor: docker/docker
+    executor: docker/default
     steps:
       # Please add $SSH_KEY_FINGERPRINT, $DEPLOYED_USER@ and DEPLOYED_SERVER to project's environment
       - add_ssh_keys:
