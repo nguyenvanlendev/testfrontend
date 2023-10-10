@@ -1,0 +1,55 @@
+.post {
+    display: flex;
+    align-items: center;
+    margin-top: 17px;
+    .post-menu {
+        margin-right: 10px;
+        min-width: 82px;
+        height: 30px;
+        background: linear-gradient(186.45deg, rgba(234, 234, 234, 0.8) 2.32%, rgba(190, 190, 190, 0.8) 79.47%);
+        border-radius: 29px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-sizing: border-box;
+    }
+
+    &-list {
+        display: flex;
+        overflow-x: auto;
+        overflow-y: hidden;
+        width: 300px;
+        .active{
+            background: linear-gradient(90deg, #2044FF 0%, #58B9FF 100%);
+            color: #fff;
+        }
+    }
+    &-list::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+.tutor {
+    h4 {
+        padding-top: 24px;
+        padding-bottom: 16px;
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 24px;
+        color: #3F3F3F;
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        gap: 17px;
+    }
+}
+
+.new-post__footer {
+    padding: 24px 0;
+    
+    button {
+        margin: 0 auto;
+    }
+}

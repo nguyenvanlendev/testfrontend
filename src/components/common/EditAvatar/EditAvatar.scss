@@ -1,0 +1,114 @@
+.edit-avatar{
+  position: relative;
+  width: 100%;
+  height: 100vh;
+
+  &__header{
+    display: flex;
+    align-items: center;
+
+    p{
+      color: #222222;
+      padding-left: 10px;
+      font-size: 20px;
+      font-weight: 600;
+    }
+    
+  }
+
+  &__main{
+    padding: 94px 0;
+  }
+
+  &__image{
+
+    &--default{
+      overflow: hidden;
+      height: 0;
+      padding-top: 100%;  
+    }
+
+    img{
+      width: 100%;
+      height: auto;
+      max-width: 100%;
+      display: block;
+    }
+    
+    img.edit-avatar__image--preview{
+      width: 100%;
+      height: 0;
+      padding-bottom: 100%;
+    }
+    // &--preview{
+    //   width: 100%;
+    //   height: 100%;
+    //   object-fit: cover;
+    //   border-radius: 45px;
+    //   overflow: hidden;
+    //   height: 0;
+    //   padding-top: 100%;
+    // }
+
+  }
+
+  &__change{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 9px;
+    gap: 8px;
+
+    &--edit{
+      cursor: pointer;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 10px;
+      width: fit-content;
+      background: linear-gradient(92.11deg, rgba(255, 255, 255, 0.9) 2.88%, rgba(255, 255, 255, 0.684) 57%, rgba(255, 255, 255, 0.846) 100%);
+      border-radius: 29px;
+
+      span{
+        padding-left: 4px;
+        color: #222222;
+      }
+    }
+
+    &--update{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  &__button{
+    display: flex;
+    justify-content: center;
+  }
+
+  &__crop-main{
+
+  }
+
+  &__crop-button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    padding-top: 79px;
+
+    button{
+      width: 176px;
+    }
+    &--left{
+      color: #222222;
+      background: linear-gradient(186.45deg, #EAEAEA 2.32%, #BEBEBE 79.47%), linear-gradient(180deg, rgba(255, 255, 255, 0.480988) 0%, rgba(255, 255, 255, 0.181108) 100%);
+    }
+
+    &--right{
+
+    }
+  }
+}

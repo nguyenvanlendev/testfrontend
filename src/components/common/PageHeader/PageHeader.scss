@@ -1,0 +1,10 @@
+.page-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    &-title {
+        color: #3F3F3F;
+        font-weight: 600;
+        font-size: 20px;
+    }
+}

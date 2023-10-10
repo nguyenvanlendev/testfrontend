@@ -1,0 +1,26 @@
+.textarea {
+  width: 100%;
+  textarea {
+    width: 100%;
+    border-radius: 20px;
+    border: none;
+    padding: 16px 20px;
+    font-size: 16px;
+    resize: none;
+    line-height: 16px;
+    &::-webkit-scrollbar {
+      width: 0 !important;
+      display: none;
+    }
+    &:focus {
+      outline: none;
+    }
+  }
+  &__error {
+    font-size: 13px !important;
+    font-style: italic;
+    color: red;
+    margin-left: 10px;
+    width: max-content;
+  }
+}

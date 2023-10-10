@@ -1,0 +1,11 @@
+.option-item {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+    padding-bottom: 12px;
+    padding-top: 12px;
+    &__value {
+        color: white;
+				font-weight: 300;
+    }
+}

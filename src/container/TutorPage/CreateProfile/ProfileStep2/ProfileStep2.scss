@@ -1,0 +1,38 @@
+.profile-step-2 {
+    max-height: calc(100vh - 250px);
+    overflow: auto;
+    &::-webkit-scrollbar {
+        display: none;
+    }
+    &__label {
+        color: #3f3f3f;
+        font-weight: 600;
+        font-size: 16px;
+        margin-left: 10px;
+        margin-bottom: 8px;
+    }
+    &__avatar {
+        margin-top: 20px;
+    }
+    &__avatar > &__label {
+        margin-bottom: 11px;
+    }
+    &__input {
+        margin-top: 10px;
+        &:nth-child(2) {
+            margin-top: 25px;
+        }
+    }
+}
+
+.calendar-wrapper {
+    position: fixed;
+    text-align: center;
+    top: 0;
+    left: 0;
+    background-color: rgba(68, 66, 66, 0.5);
+    z-index: 999999999999;
+    padding-top: 13%;
+    right: 0;
+    bottom: 0;
+  }

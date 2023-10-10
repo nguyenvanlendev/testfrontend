@@ -1,0 +1,113 @@
+.card-profile {
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 7px;
+  margin-top: 20px;
+
+  &__left {
+    // min-width: 123px;
+
+    &--image {
+      width: 113px;
+      height: 113px;
+      background: linear-gradient(0deg, #3955ff 0%, #91efff 100%);
+      border-radius: 20px;
+      padding: 3px;
+      img {
+        border-radius: 20px;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+
+    &--star {
+      padding-top: 13px;
+    }
+
+    &--toggle {
+      display: flex;
+      justify-content: space-between;
+      padding-top: 13px;
+
+      .label {
+        font-weight: 400;
+        font-size: 13px;
+      }
+
+      .toggle {
+      }
+    }
+  }
+
+  &__right {
+    .content {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding-top: 10px;
+      padding-bottom: 23px;
+      padding-left: 16px;
+      padding-right: 25px;
+
+      &__detail {
+        display: flex;
+        justify-content: start;
+        gap: 10px;
+        font-weight: 400;
+        font-size: 14px;
+
+        &--name {
+          font-weight: 600;
+          font-size: 15px;
+
+          span {
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            display: -webkit-box;
+            white-space: normal;
+            overflow: hidden;
+            // max-width: 150px;
+            width: fit-content;
+            word-break: break-word;
+            @media screen and (max-width: 400px) {
+              max-width: 120px;
+            }
+          }
+        }
+
+        &--subjects {
+        }
+
+        &--grades {
+        }
+
+        &--addresses {
+        }
+      }
+
+      &__detail:not(:first-child) {
+        padding-top: 10px;
+      }
+    }
+  }
+
+  &__edit {
+    position: absolute;
+    top: 15px;
+    right: 10px;
+  }
+
+  &__inform {
+    padding-top: 11px;
+    &--text {
+      font-weight: 500;
+      font-size: 15px;
+      font-style: italic;
+      color: #3f3f3f;
+    }
+  }
+}

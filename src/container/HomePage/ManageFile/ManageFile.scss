@@ -1,0 +1,48 @@
+.manage-file {
+  &__name {
+    font-size: 25px;
+    font-weight: 600;
+    color: #3f3f3f;
+    text-align: center;
+    padding: 10px;
+    word-break: break-word;
+  }
+  &__avatar {
+    margin: auto;
+    margin-top: 35px;
+    width: fit-content;
+  }
+  &__role {
+    color: #0065ff;
+    font-size: 20px;
+    font-weight: 400;
+    text-align: center;
+  }
+  &__menu {
+    &--logined {
+      padding-left: 10px;
+      padding-right: 10px;
+      .btn {
+        margin-top: 23px;
+        width: 100%;
+        &:last-child {
+          background: linear-gradient(180deg, #ffafa3 0%, #ff3333 100%);
+        }
+      }
+    }
+    &--un-logined {
+      margin-top: 24px;
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      .btn {
+        // width: 125px;
+        filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.2));
+        &:last-child {
+          color: black;
+          background: radial-gradient(107.35% 122.62% at 29.56% 104.76%, #ff9315 6.05%, #ffde30 60.42%, #ffe27c 100%);
+        }
+      }
+    }
+  }
+}

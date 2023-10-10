@@ -1,0 +1,36 @@
+.header-title-mobile {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  &__back {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+    .header-title-mobile__title {
+      font-weight: 600;
+      font-size: 20px;
+      color: #3f3f3f;
+    }
+  }
+  &__noti {
+    position: relative;
+    span {
+      position: absolute;
+      top: -5px;
+      right: 0px;
+      width: 22px;
+      height: 22px;
+      background: #e42726;
+      border-radius: 50%;
+      font-size: 13px;
+      text-align: center;
+      line-height: 22px;
+      color: white;
+    }
+
+    &--icon {
+      margin: 2px 12px 0 0;
+    }
+  }
+}

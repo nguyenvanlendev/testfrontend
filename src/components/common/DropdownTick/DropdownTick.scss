@@ -1,0 +1,83 @@
+.dropdowntick {
+  position: relative;
+  &__header {
+    position: relative;
+    // z-index: 7;
+    &--value {
+      width: 100%;
+      color: black;
+      background: white;
+      padding-top: 16px;
+      padding-bottom: 16px;
+      border-radius: 20px;
+      padding-left: 14px;
+      .list-chosen-option {
+        display: flex;
+        gap: 8px;
+        margin-right: 55px;
+        overflow-x: auto;
+        &::-webkit-scrollbar {
+          display: none;
+        }
+        .chosen-option {
+          background: rgba(0, 0, 0, 0.1);
+          border-radius: 14px;
+          padding: 5px 7px;
+          display: flex;
+          gap: 7px;
+          align-items: center;
+          white-space: nowrap;
+
+          & > span {
+            color: black;
+          }
+
+          svg {
+            display: flex;
+          }
+        }
+
+        .chosen-option:last-child {
+          padding-right: 10px;
+        }
+      }
+    }
+    &--icon {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      right: 27px;
+    }
+  }
+  &__error {
+    font-size: 13px !important;
+    font-style: italic;
+    color: red;
+    margin-left: 10px;
+    width: max-content;
+  }
+
+  &__body {
+    width: 100%;
+    background: #2c54a4;
+    padding: 22px;
+    border-radius: 20px;
+    position: absolute;
+    top: 0;
+    z-index: 6;
+    max-height: 300px;
+    overflow-y: auto;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
+    &.padding-64 {
+      padding-top: 64px;
+    }
+
+    &.padding-44 {
+      padding-top: 44px;
+    }
+  }
+}

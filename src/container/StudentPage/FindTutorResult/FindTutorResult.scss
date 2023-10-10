@@ -1,0 +1,21 @@
+.find-tutor-result {
+    &__title {
+        margin-bottom: 23px;
+    }
+    &__search {
+        
+    }
+    &__list-tutor {
+        margin-top: 16px;
+    }
+    &__no-result{
+        height: 500px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    &__btn {
+        width: fit-content;
+        margin: auto;
+    }
+}

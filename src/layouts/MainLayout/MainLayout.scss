@@ -1,0 +1,27 @@
+.main-layout {
+    background: #EBEBFF;
+    @media only screen and (min-width: 576px) {
+        background: #C7CFF7;
+      }
+    &__header {
+        position: fixed;
+        width: 100%;
+        z-index: 101;
+    }
+    &__height {
+        height: 78px;
+    }   
+    &__content {
+        padding: 25px;
+        max-width: 576px;
+        margin: auto;
+        background: #EBEBFF;
+    }
+    &__footer {
+        display: none;
+        @media only screen and (min-width: 576px) {
+            display: block;
+        }
+    }
+    
+}

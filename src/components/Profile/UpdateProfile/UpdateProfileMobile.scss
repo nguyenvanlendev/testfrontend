@@ -1,0 +1,117 @@
+@import '../../../assets/scss/variable.scss';
+
+.update-profile-mobile {
+  &__header {
+    display: flex;
+    align-items: center;
+
+    p {
+      color: black;
+      padding-left: 10px;
+      font-size: 20px;
+      font-weight: 600;
+    }
+  }
+
+  &__avatar {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    margin: 0 auto;
+
+    &--image {
+    }
+
+    &--icon {
+      position: absolute;
+      bottom: -5px;
+      right: -5px;
+      width: 32px;
+      height: 32px;
+    }
+  }
+
+  &__main {
+    .input-wrapper {
+      padding-top: 16px;
+
+      input {
+        font-size: 15px;
+      }
+
+      &--otp {
+        padding-top: 19px;
+
+        .input {
+          p {
+            margin-bottom: 0 !important;
+          }
+        }
+      }
+    }
+
+    .input-wrapper:nth-child(1) {
+      padding-top: 19px;
+    }
+
+    padding-top: 19px;
+    font-size: 16px;
+    font-weight: 500;
+    padding-bottom: 12px;
+
+    &--otp {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    &--title {
+      font-weight: 500;
+      font-size: 16px;
+      color: #000000;
+      padding-left: 10px;
+      text-align: justify;
+    }
+    &--label {
+      font-weight: 500;
+      font-size: 16px;
+      color: black;
+      padding-left: 14px;
+      padding-bottom: 7px;
+    }
+
+    &--registerpass {
+      padding-left: 14px;
+      padding-top: 12px;
+      a {
+        color: #0064ff;
+        text-decoration-line: underline;
+        font-style: italic;
+      }
+    }
+  }
+
+  &__note {
+    text-align: center;
+    padding-top: 16px;
+
+    &--error {
+      p {
+        color: red;
+        font-style: italic;
+      }
+    }
+  }
+
+  &__footer {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__button {
+    padding: 20px 44px;
+    &--otp {
+      height: 52px;
+      padding: 0 20px;
+    }
+  }
+}

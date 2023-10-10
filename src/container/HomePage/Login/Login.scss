@@ -1,0 +1,80 @@
+@import '../../../assets/scss/variable.scss';
+
+
+.login-wrapper{
+  color: black !important;
+  position: relative;
+  height: calc(100vh - 103px);
+
+  .login{
+    &__header{
+      display: flex;
+      align-items: center;
+
+      p{
+        color: black;
+        padding-left: 10px;
+        font-size: 20px;
+        font-weight: 600;
+      }
+    }
+
+    .input-wrapper:nth-child(1){
+    padding-bottom: 20px;
+    }
+
+    &__main{      
+      .input-wrapper:first-child{
+        padding-bottom: 16px;
+      }
+     
+      padding-top: 54px;
+      font-size: 16px;
+      font-weight: 500;
+      padding-bottom: 12px;
+
+      &--label{
+        font-weight: 500;
+        font-size: 16px;
+        color: black;
+        padding-left: 14px;
+        padding-bottom: 7px;
+      }
+
+      &--forgotpass{
+        padding-left: 14px;
+        padding-top: 12px;
+        a{
+          color: #0064FF;
+          text-decoration-line: underline;
+          font-style: italic;
+        }
+      }
+    }
+
+    &__footer{
+      position: absolute;
+      bottom: 83px;
+      left: 0;
+      right: 0;
+      display: flex;
+      justify-content: center;
+    }
+
+    &__button{
+      padding: 20px 44px;
+    }
+
+    &__note{
+      //text-align: center;
+      padding-top: 16px;
+ 
+       &--error{
+         p{
+           color: red;
+           font-style: italic;
+         }
+       }
+     }
+  }
+}

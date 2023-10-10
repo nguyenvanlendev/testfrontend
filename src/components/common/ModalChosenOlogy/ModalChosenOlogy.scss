@@ -1,0 +1,42 @@
+.modal-chosen {
+  width: 492px;
+  height: 200px;
+  background: linear-gradient(24.06deg, #5353E6 13.42%, #8284EF 85.57%);
+  border-radius: 20px;
+  padding: 20px 20px;
+  font-weight: 400;
+  font-size: 17px;
+  text-align: center;
+  padding-bottom: 28px;
+  @media only screen and (max-width: 576px) {
+    width: 90vw !important;
+  }
+  p {
+    width: 300px;
+    margin: auto;
+    margin-top: 30px;
+    font-weight: 700;
+  }
+  .list-btn {
+    margin-top: 30px;
+    margin-bottom: 28px;
+    display: flex;
+    justify-content: space-around;
+    button {
+      width: 140px;
+      border: none;
+      height: 40px;
+      cursor: pointer;
+      &.btn-no {
+        background: linear-gradient(143.27deg, rgba(255, 255, 255, 0.48) 2.71%, rgba(255, 255, 255, 0.12) 213.3%);
+        box-shadow: 0px 8px 14px rgba(0, 0, 0, 0.2);
+        border-radius: 60px;
+      }
+      &.btn-yes {
+        background: linear-gradient(0deg, #3955FF 0%, #91EFFF 100%);
+        box-shadow: 0px 8px 14px rgba(0, 0, 0, 0.2);
+        border-radius: 60px;
+      }
+    }
+  }
+}

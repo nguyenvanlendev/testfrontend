@@ -1,0 +1,216 @@
+{
+  "name": "yotutor",
+  "version": "1.0.0",
+  "description": "",
+  "private": true,
+  "main": "index.js",
+  "scripts": {
+    "start": "node scripts/start.js",
+    "s": "node scripts/start.js",
+    "build": "node scripts/build.js",
+    "b": "node scripts/build.js",
+    "test": "node scripts/test.js",
+    "// ---DEFAULT CRA---": "",
+    "cypress:open": "cypress open",
+    "cyo": "cypress open",
+    "start:coverage": "nyc --silent node server",
+    "cy:open": "node scripts/cypress.js open --component"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app/jest"
+    ]
+  },
+  "overrides": [
+    {
+      "extends": [
+        "plugin:cypress/recommended"
+      ],
+      "files": [
+        "cypress/**/*.js",
+        "cypress/**/*.ts"
+      ]
+    }
+  ],
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "author": "",
+  "license": "ISC",
+  "jest": {
+    "roots": [
+      "<rootDir>/src"
+    ],
+    "collectCoverageFrom": [
+      "src/**/*.{js,jsx,ts,tsx}",
+      "!src/**/*.d.ts"
+    ],
+    "setupFiles": [
+      "react-app-polyfill/jsdom"
+    ],
+    "setupFilesAfterEnv": [
+      "<rootDir>/src/setupTests.ts"
+    ],
+    "testMatch": [
+      "<rootDir>/src/**/__tests__/**/*.{js,jsx,ts,tsx}",
+      "<rootDir>/src/**/*.{spec,test}.{js,jsx,ts,tsx}"
+    ],
+    "testEnvironment": "jsdom",
+    "transform": {
+      "^.+\\.(js|jsx|mjs|cjs|ts|tsx)$": "<rootDir>/config/jest/babelTransform.js",
+      "^.+\\.css$": "<rootDir>/config/jest/cssTransform.js",
+      "^(?!.*\\.(js|jsx|mjs|cjs|ts|tsx|css|json)$)": "<rootDir>/config/jest/fileTransform.js"
+    },
+    "transformIgnorePatterns": [
+      "[/\\\\]node_modules[/\\\\].+\\.(js|jsx|mjs|cjs|ts|tsx)$",
+      "^.+\\.module\\.(css|sass|scss)$"
+    ],
+    "modulePaths": [],
+    "moduleNameMapper": {
+      "^react-native$": "react-native-web",
+      "^.+\\.module\\.(css|sass|scss)$": "identity-obj-proxy"
+    },
+    "moduleFileExtensions": [
+      "web.js",
+      "js",
+      "web.ts",
+      "ts",
+      "web.tsx",
+      "tsx",
+      "json",
+      "web.jsx",
+      "jsx",
+      "node"
+    ],
+    "watchPlugins": [
+      "jest-watch-typeahead/filename",
+      "jest-watch-typeahead/testname"
+    ],
+    "resetMocks": true
+  },
+  "babel": {
+    "presets": [
+      "react-app"
+    ]
+  },
+  "dependencies": {
+    "@babel/core": "^7.16.0",
+    "@babel/polyfill": "^7.12.1",
+    "@fontsource/montserrat": "^4.5.14",
+    "@microsoft/signalr": "^7.0.5",
+    "@pmmmwh/react-refresh-webpack-plugin": "^0.5.3",
+    "@reduxjs/toolkit": "^1.5.1",
+    "@svgr/webpack": "^5.5.0",
+    "@testing-library/user-event": "^13.2.1",
+    "@types/dompurify": "^2.4.0",
+    "@types/lodash": "4.14.192",
+    "@types/node": "^16.7.13",
+    "@types/react": "^18.0.0",
+    "@types/react-dom": "^18.0.0",
+    "@types/react-image-crop": "8.1.2",
+    "@types/react-slick": "^0.23.10",
+    "@types/uuid": "^8.3.4",
+    "axios": "^0.27.2",
+    "babel-jest": "^27.4.2",
+    "babel-loader": "^8.2.3",
+    "babel-plugin-named-asset-import": "^0.3.8",
+    "babel-preset-react-app": "^10.0.1",
+    "bfj": "^7.0.2",
+    "browserslist": "^4.18.1",
+    "buffer": "^6.0.3",
+    "camelcase": "^6.2.1",
+    "case-sensitive-paths-webpack-plugin": "^2.4.0",
+    "crypto-js": "^4.1.1",
+    "css-loader": "^6.5.1",
+    "css-minimizer-webpack-plugin": "^3.2.0",
+    "dompurify": "^2.4.1",
+    "dotenv": "^10.0.0",
+    "dotenv-expand": "^5.1.0",
+    "eslint": "^8.3.0",
+    "eslint-config-react-app": "^7.0.1",
+    "eslint-webpack-plugin": "^3.1.1",
+    "file-loader": "^6.2.0",
+    "fontfaceobserver": "^2.3.0",
+    "formik": "^2.2.9",
+    "fs-extra": "^10.0.0",
+    "hls.js": "^1.2.1",
+    "html-webpack-plugin": "^5.5.0",
+    "identity-obj-proxy": "^3.0.0",
+    "install": "^0.13.0",
+    "jest": "^27.4.3",
+    "jest-resolve": "^27.4.2",
+    "jest-watch-typeahead": "^1.0.0",
+    "lodash": "4.17.21",
+    "mini-css-extract-plugin": "^2.4.5",
+    "moment": "^2.29.1",
+    "npm": "^8.18.0",
+    "postcss": "^8.4.4",
+    "postcss-flexbugs-fixes": "^5.0.2",
+    "postcss-loader": "^6.2.1",
+    "postcss-normalize": "^10.0.1",
+    "postcss-preset-env": "^7.0.1",
+    "prompts": "^2.4.2",
+    "react": "^18.2.0",
+    "react-app-polyfill": "^3.0.0",
+    "react-copy-to-clipboard": "^5.0.4",
+    "react-dev-utils": "^12.0.1",
+    "react-dom": "^18.2.0",
+    "react-error-boundary": "^3.1.4",
+    "react-ga": "^3.3.0",
+    "react-hook-form": "^7.26.1",
+    "react-icons": "^4.3.1",
+    "react-image-crop": "8.6.6",
+    "react-infinite-scroll-component": "^6.1.0",
+    "react-pdf": "^5.7.1",
+    "react-redux": "^7.2.3",
+    "react-refresh": "^0.11.0",
+    "react-responsive": "^9.0.0-beta.3",
+    "react-router-dom": "^6.3.0",
+    "react-simple-captcha": "^8.2.6",
+    "react-slick": "^0.29.0",
+    "react-tooltip": "^4.5.1",
+    "reactjs-social-login": "^2.5.1",
+    "resolve": "^1.20.0",
+    "resolve-url-loader": "^4.0.0",
+    "sass-loader": "^13.0.2",
+    "semver": "^7.3.5",
+    "slick-carousel": "^1.8.1",
+    "source-map-loader": "^3.0.0",
+    "stream-http": "^3.2.0",
+    "style-loader": "^3.3.1",
+    "tailwindcss": "^3.0.2",
+    "terser-webpack-plugin": "^5.2.5",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^4.7.4",
+    "url": "^0.11.0",
+    "uuid": "^8.3.2",
+    "web-vitals": "^2.1.0",
+    "webpack": "^5.74.0",
+    "webpack-manifest-plugin": "^4.0.2",
+    "workbox-webpack-plugin": "^6.4.1"
+  },
+  "devDependencies": {
+    "@cypress/code-coverage": "^3.10.0",
+    "@cypress/react": "^6.1.1",
+    "@cypress/webpack-dev-server": "^2.2.0",
+    "@cypress/webpack-preprocessor": "^5.12.2",
+    "@types/jest": "^28.1.8",
+    "@typescript-eslint/eslint-plugin": "^5.33.0",
+    "@typescript-eslint/parser": "^5.33.0",
+    "cypress": "^10.6.0",
+    "eslint-plugin-react": "^7.30.1",
+    "react-scripts": "^5.0.1",
+    "sass": "^1.54.4",
+    "ts-loader": "^9.3.1",
+    "webpack-dev-server": "^4.10.0"
+  }
+}

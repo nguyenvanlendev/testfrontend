@@ -1,0 +1,70 @@
+.quick-find-tutor {
+    &__btn {
+        width: fit-content;
+        margin: auto;
+        margin-top: 70px;
+        margin-bottom: 30px;
+    }
+
+    &__item {
+        margin-top: 16px;
+    }
+
+    &__label {
+        margin-bottom: 7px;
+        padding-left: 14px;
+        color: #3F3F3F;
+        font-weight: 700;
+    }
+    &__subject {
+        .dropdowntick__header {
+            z-index: 20;
+        }
+        .dropdowntick__body {
+            z-index: 19;
+        }
+    }
+    &__grade {
+        .dropdowntick__header {
+            z-index: 18;
+        }
+        .dropdowntick__body {
+            z-index: 17;
+        } 
+    }
+    &__format-teaching {
+        .dropdowntick__header {
+            z-index: 16;
+        }
+        .dropdowntick__body {
+            z-index: 15;
+        } 
+    }
+    
+    &__area {
+        .dropdowntick__header {
+            z-index: 14;
+        }
+        .dropdowntick__body {
+            z-index: 13;
+        } 
+    }
+
+    &__sex {
+        .dropdowntick__header {
+            z-index: 12;
+        }
+        .dropdowntick__body {
+            z-index: 11;
+        } 
+    }
+
+    &__level {
+        .dropdowntick__header {
+            z-index: 10;
+        }
+        .dropdowntick__body {
+            z-index: 9;
+        } 
+    }
+}

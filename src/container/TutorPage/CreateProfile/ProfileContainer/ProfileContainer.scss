@@ -1,0 +1,36 @@
+.profile-container {
+    min-height: calc(100vh - 128px);
+    position: relative;
+    &__process {
+        display: flex;
+        justify-content: center;
+        gap: 8px;
+        margin-top: 20px;
+        &__item {
+            width: 100%;
+            height: 5px;
+            border-radius: 20px;
+            background: #AAACFF;
+            opacity: 0.8;
+            &.active {
+                background: linear-gradient(144.63deg, #51C0FF 14.91%, #3883F7 86.13%), #0065FF;
+                opacity: 1;
+            }
+        }
+    }
+    &__btns {
+        position: absolute;
+        bottom: 0;
+        display: flex;
+        justify-content: center;
+        gap: 12px;
+        width: 100%;
+        button {
+            width: 100%;
+        }
+        &__back {
+            background: linear-gradient(186.45deg, #EAEAEA 2.32%, #BEBEBE 79.47%), linear-gradient(180deg, rgba(255, 255, 255, 0.480988) 0%, rgba(255, 255, 255, 0.181108) 100%);
+            color: #3F3F3F;
+        }
+    }
+}

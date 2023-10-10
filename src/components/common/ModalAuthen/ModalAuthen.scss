@@ -1,0 +1,61 @@
+.modal-authen {
+  &__layout {
+    position: relative;
+    margin: 0px 20px;
+    max-width: 364px;
+    min-height: 210px;
+    height: fit-content;
+    background: #ffffff !important;
+    border-radius: 20px;
+
+    .close-icon {
+      position: absolute;
+      right: -8px;
+      top: -15px;
+    }
+
+    img {
+      position: absolute;
+      width: 124px;
+      height: 101px;
+      top: -25%;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    p {
+      padding: 60px 25px 20px;
+      text-align: center;
+      font-size: 16px;
+      font-weight: 600;
+    }
+  }
+
+  &__footer {
+    position: absolute;
+    display: flex;
+    gap: 12px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    .btn {
+      border: 1px solid #ccc;
+      width: 120px;
+      height: 48px;
+      padding: 0;
+      filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.2));
+      border: none;
+    }
+
+    .btn-left {
+      color: #ffffff;
+      background: linear-gradient(0deg, #3955ff 0%, #91efff 100%), #ffffff;
+    }
+
+    .btn-right {
+      color: #3f3f3f;
+      background: radial-gradient(107.35% 122.62% at 29.56% 104.76%, #ff9315 6.05%, #ffde30 60.42%, #ffe27c 100%),
+        linear-gradient(0deg, #3955ff 0%, #91efff 100%), #ffffff;
+    }
+  }
+}

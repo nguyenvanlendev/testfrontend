@@ -1,0 +1,186 @@
+@import 'slick-carousel/slick/slick.css';
+@import 'slick-carousel/slick/slick-theme.css';
+
+body {
+  font-family: 'Montserrat';
+  font-size: 15px;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  background-color: #EBEBFF;
+  // color: #343434;
+  color: white;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+button {
+  font-family: 'Montserrat';
+  font-size: 14px;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  color: #3F3F3F;
+  // color: #3F3F3F;
+  // -webkit-user-select: none;
+  // -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+::placeholder {
+  font-size: 14px;
+  font-family: 'Montserrat';
+  color: #3F3F3F;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  font-family: 'Montserrat';
+  color: #3F3F3F;
+}
+input,
+textarea {
+  font-family: 'Montserrat';
+  font-size: 14px;
+  color: #3F3F3F;
+}
+
+// img {
+//   width: 100%;
+// }
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+  position: fixed;
+  right: 0px;
+  top: 0px;
+  bottom: 0px;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #aaaaaa;
+  border-radius: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #eeeeee;
+}
+a {
+  text-decoration: none;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  select,
+  textarea,
+  input {
+    font-size: 16px;
+  }
+}
+
+.infinite-scroll-component {
+  overflow: hidden !important;
+}
+
+body {
+  -webkit-touch-callout: none !important;
+}
+a {
+  -webkit-user-select: none !important;
+}
+
+.noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Old versions of Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
+}
+
+input {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+input[type="radio"]{
+  -webkit-appearance: radio;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type='number'] {
+  -moz-appearance: textfield;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  -webkit-transition: 'color 9999s ease-out, background-color 9999s ease-out';
+  -webkit-transition-delay: 9999s;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: local('Montserrat'),
+    url('./fonts/Montserrat/Montserrat-Regular.ttf')
+      format('truetype');
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: local('Montserrat'),
+    url('./fonts/Montserrat/Montserrat-Bold.ttf')
+      format('truetype');
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: local('Montserrat'),
+    url('./fonts/Montserrat/Montserrat-SemiBold.ttf')
+      format('truetype');
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: local('Montserrat'),
+    url('./fonts/Montserrat/Montserrat-MediumItalic.ttf')
+      format('truetype');
+  font-weight: 400;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: local('Montserrat'),
+    url('./fonts/Montserrat/Montserrat-Medium.ttf')
+      format('truetype');
+  font-weight: 100;
+}

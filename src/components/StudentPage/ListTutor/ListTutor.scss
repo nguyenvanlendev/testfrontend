@@ -1,0 +1,24 @@
+.list-tutor {
+  &__contain {
+    overflow: scroll;
+    // margin-right: -25px;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+  &__list {
+    display: flex;
+    gap: 17px;
+    width: fit-content;
+  }
+
+  &.list-tutor__horizontal {
+    .list-tutor__contain {
+      margin-right: unset;
+    }
+    .list-tutor__list {
+      flex-direction: column;
+      width: 100%;
+    }
+  }
+}

@@ -1,0 +1,53 @@
+.modal-confirm-layout {
+  position: relative;
+  margin: 0px 20px;
+  max-width: 364px;
+  min-height: 130px;
+  height: fit-content;
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 60px 25px 35px;
+
+  .close-icon {
+    position: absolute;
+    right: -8px;
+    top: -15px;
+  }
+
+  img {
+    position: absolute;
+    // min-width: 124px;
+    // width: fit-content;
+    width: 124px;
+    height: 101px;
+    top: -30%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  p {
+    text-align: center;
+    font-size: 16px;
+    font-weight: 500;
+  }
+
+  .modal-confirm-footer {
+    position: absolute;
+    display: flex;
+    gap: 12px;
+    left: 50%;
+    bottom: -24px;
+    transform: translateX(-50%);
+
+    .btn {
+      border: 1px solid #ccc;
+      width: 120px;
+      height: 48px;
+    }
+
+    .btn-cancel {
+      color: #3f3f3f;
+      background: linear-gradient(186.45deg, #eaeaea 2.32%, #bebebe 79.47%), #d9d9d9;
+    }
+  }
+}

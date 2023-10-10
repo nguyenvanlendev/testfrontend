@@ -1,0 +1,29 @@
+.single-otp-input {
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  box-sizing: border-box;
+  border-radius: 20px;
+  background-color: transparent;
+  height: 60px;
+  width: 60px;
+  text-align: center;
+  font-size: 30px;
+  color: #fff;
+  margin: 2px;
+
+  @media screen and (max-width: 455px) {
+    height: 55px;
+    width: 55px;
+    font-size: 27px;
+  }
+
+  @media screen and (max-width: 325px) {
+    height: 45px;
+    width: 45px;
+    border-radius: 15px;
+    font-size: 20px;
+  }
+
+  &:focus {
+    outline: none;
+  }
+}

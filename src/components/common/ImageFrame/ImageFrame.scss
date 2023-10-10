@@ -1,0 +1,48 @@
+.image-frame {
+  width: 100%;
+  aspect-ratio: 1;
+  background-color: #cecece;
+  border-radius: 30px;
+  position: relative;
+  overflow: hidden;
+  &__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  &__input {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    &__wrap {
+      width: 36px;
+      height: 36px;
+      input {
+        position: absolute;
+        width: 36px;
+        height: 36px;
+        opacity: 0;
+        z-index: 12;
+      }
+      &__icon {
+        position: absolute;
+        width: 36px;
+        height: 36px;
+      }
+    }
+    &__label {
+      padding: 6px 17px;
+      margin-top: 8px;
+      background-color: #737373;
+      border-radius: 400px;
+      color: white;
+      font-size: 15px;
+      width: max-content;
+    }
+  }
+}

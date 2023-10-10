@@ -1,0 +1,14 @@
+.list-star {
+    display: flex;
+    // justify-content: space-between;
+    gap: 5px;
+    .score {
+        color: black;
+        font-weight: 600;
+    }
+    .list {
+        display: flex;
+        gap: 4px;
+    }
+}
+

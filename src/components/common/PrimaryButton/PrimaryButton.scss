@@ -1,0 +1,208 @@
+.primary-button {
+  display: flex;
+  align-items: center;
+  width: 146px;
+  height: 44px;
+  position: relative;
+  border-radius: 30px;
+  display: flex;
+  justify-content: center;
+  // align-items: center;
+  background: linear-gradient(
+    131.76deg,
+    rgba(255, 255, 255, 0.69) 14.93%,
+    rgba(196, 196, 196, 0.21) 81.39%
+  );
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.18);
+  cursor: pointer;
+  font-size: 15px;
+  color: white;
+  font-weight: bold;
+  user-select: none;
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: inherit;
+    padding: 1px;
+
+    background: linear-gradient(131.93deg, #ffffff 14.8%, rgba(255, 255, 255, 0) 85%);
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: source-out;
+    // mask-composite: exclude;
+  }
+
+  &--blue {
+    // background: linear-gradient(136.67deg, #395ef2 10.93%, #67d1fa 98%);
+    background: linear-gradient(0deg, #3955ff 0%, #91efff 100%);
+    &::before {
+      background: linear-gradient(
+        265.95deg,
+        rgba(255, 255, 255, 0.559058) 6.13%,
+        rgba(255, 255, 255, 0.530458) 93.98%
+      );
+    }
+  }
+  &--yellow {
+    background: linear-gradient(43.91deg, #ff9029 4.17%, #fff174 91.52%);
+    &::before {
+      background: linear-gradient(275.86deg, rgba(255, 255, 255, 0.405594) 4.66%, #ffffff 91.73%);
+    }
+  }
+
+  &--dark-yellow {
+    background: linear-gradient(136.67deg, #f27c39 10.93%, #fad167 89.03%);
+    &::before {
+      background: linear-gradient(275.86deg, rgba(255, 255, 255, 0.405594) 4.66%, #ffffff 91.73%);
+    }
+  }
+
+  &--red {
+    background: linear-gradient(180deg, #ff3f3f 0%, #ff7777 100%);
+  }
+
+  &--real-trans {
+    background: transparent;
+  }
+
+  &--glass {
+    background: linear-gradient(144.63deg, rgba(255, 255, 255, 0.605441) 14.91%, rgba(255, 255, 255, 0.0569001) 86.13%);
+    mix-blend-mode: normal;
+    opacity: 0.85;
+    box-shadow: -2px 4px 4px rgba(0, 0, 0, 0.18);
+    backdrop-filter: blur(54.3656px);
+    // box-shadow: -4px 5px 15px rgba(0, 0, 0, 0.18);
+    border-radius: 130px;
+    p {
+      -webkit-background-clip: text !important;
+      -webkit-text-fill-color: transparent;
+      // background-clip: text;
+      font-size: 50px;
+      // line-height: 26px;
+      /* or 37% */
+
+      letter-spacing: 0.02em;
+      background: linear-gradient(
+        90.15deg,
+        #1badff -0.23%,
+        #6e62ff 32.92%,
+        #ce2cd1 64.3%,
+        #ff75a7 98.26%
+      );
+    }
+  }
+
+  &--disabled {
+    background: #7f8c8d;
+    cursor: default;
+  }
+  &--text-black {
+    color: black;
+  }
+  &--text-transparent {
+    color: rgba($color: #fff, $alpha: 0.5);
+  }
+
+  &--xs {
+    width: 90px;
+    height: 36px;
+    border-radius: 25px;
+    &::before {
+      // display: none;
+    }
+  }
+  &--sm {
+    width: 140px;
+    height: 50px;
+  }
+  &--md {
+    width: 190px;
+  }
+  &--xmd {
+    width: 222px;
+  }
+  &--xxmd {
+    width: 264px;
+  }
+  &--m {
+    width: 140px;
+    height: 50px;
+  }
+  &--l {
+    width: 150px;
+    height: 60px;
+  }
+  &--xl {
+    width: 180px;
+    height: 52px;
+    border-radius: 30px;
+  }
+  &--laptop {
+    width: 258px;
+    height: 60px;
+    border-radius: 40px;
+  }
+
+  &--circle {
+    width: 30px;
+    height: 30px;
+    flex-shrink: 0;
+    border-radius: 15px;
+  }
+  &--hide-border {
+    &::before {
+      display: none;
+    }
+  }
+
+  &--checked {
+    &::after {
+      content: '';
+      position: absolute;
+      left: 11px;
+      top: 6px;
+      width: 8px;
+      height: 14px;
+      border: solid #ffffff;
+      border-color: #ffffff;
+      border-width: 0px 2px 2px 0;
+      -webkit-transform: rotate(40deg);
+      -ms-transform: rotate(40deg);
+      transform: rotate(40deg);
+    }
+  }
+
+  &--wrong {
+    &::after,
+    &::before {
+      position: absolute;
+      left: 14px;
+      content: ' ';
+      height: 12px;
+      width: 2px;
+      background-color: white;
+      border-radius: 5px;
+    }
+    &::before {
+      background: unset;
+      top: unset;
+      right: unset;
+      bottom: unset;
+      -webkit-mask: unset;
+      display: block;
+      position: absolute;
+      background-color: white;
+      transform: rotate(45deg);
+    }
+    &::after {
+      transform: rotate(-45deg);
+    }
+  }
+  &--style-exam {
+    height: 52px;
+    width: 180px;
+  }
+}

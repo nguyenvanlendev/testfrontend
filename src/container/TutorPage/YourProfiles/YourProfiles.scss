@@ -1,0 +1,68 @@
+.your-profiles{
+  &__header{
+
+  }
+
+  &__main{
+    .profile{
+      display: flex;
+      align-items: center;
+      margin-top: 17px;
+      gap: 8px;
+
+      .profile-add,.profile-list__item {
+        min-width: 82px;
+        font-size: 15px;
+        font-weight: 600;
+        height: 30px;
+        background: linear-gradient(186.45deg, rgba(234, 234, 234, 0.8) 2.32%, rgba(190, 190, 190, 0.8) 79.47%);
+        border-radius: 29px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-sizing: border-box;
+      }
+
+      .profile-list{
+        display: flex;
+        overflow-x: hidden;
+        width: 300px;
+        gap: 8px;
+        overflow-x: auto;
+        overflow-y: hidden;
+
+        &::-webkit-scrollbar {
+          display: none;
+        }
+
+        &__item{
+          &.active{
+            color:#FFFFFF;
+            background: linear-gradient(90deg, #2044FF 0%, #58B9FF 100%);
+          }
+
+        }
+      }
+
+    }
+
+    .profile-received,.suitable-profile{
+      padding-top: 24px;
+      
+
+      .title{
+        padding-left: 5px;
+      }
+      
+    }
+
+    .profile-received{
+
+    }
+    .suitable-profile{
+      padding-bottom: 16px;
+    }
+   
+  }
+}
+

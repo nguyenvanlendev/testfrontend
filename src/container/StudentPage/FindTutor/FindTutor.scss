@@ -1,0 +1,26 @@
+.find-tutor {
+    &__title {
+       
+    }
+    &___search {
+        margin-top: 18px;
+    }
+    &__intro {
+        margin-top: 18px;
+    }
+    &__list-online {
+       margin-top: 24px;
+    }
+
+    &__list-off {
+        margin-top: 24px;
+    }
+    &__list-subject {
+        margin-top: 38px;
+        &--title {
+            font-weight: 700;
+            font-size: 20px;
+            margin-bottom: 16px;
+        }
+    }
+}
