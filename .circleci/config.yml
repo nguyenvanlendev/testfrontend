@@ -1,5 +1,9 @@
 version: 2.1
 
+orbs:
+  docker: circleci/docker@2.4.0
+
+
 jobs:
   build:
     docker:
@@ -15,7 +19,7 @@ jobs:
       #     command: npm run build
 
       - setup_remote_docker:
-          version: 20.10.8  
+          version: 20.10.8
           # Specify the Docker version you want to use
 
       - run:
