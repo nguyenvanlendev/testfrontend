@@ -20,7 +20,7 @@ jobs:
           name: Build docker image
           command: |
             docker build -t lennguyen03/react-cicd-test .
-            echo $DOCKER_PASSWORD | docker login -u lennguyen03 -- password-stdin
+            echo $DOCKER_PASSWORD | docker login -u lennguyen03 --password-stdin
             docker push lennguyen03/react-cicd-test:latest
 
 workflows:
