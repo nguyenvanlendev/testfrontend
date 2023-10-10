@@ -1,0 +1,58 @@
+# my config
+version: 2.1
+orbs:
+  #node: circleci/node@5.1.0
+  docker: circleci/docker@2.4.0
+
+jobs:
+  build-and-push:
+    # docker:
+    #   - image: node:14
+     executor: docker/docker
+    environment:
+      DOCKER_IMAGE: lennguyen03/react-docker
+      DOCKER_TAG: latest
+   
+    steps:
+      - setup_remote_docker
+      - checkout
+      - docker/check:
+          docker-username: DOCKER_USER
+          docker-password: DOCKER_PASSWORD
+      - docker/build:
+          image: $DOCKER_IMAGE
+          tag: $DOCKER_TAG
+      - docker/push:
+          digest-path: /tmp/digest.txt
+          image: $DOCKER_IMAGE
+          tag: $DOCKER_TAG
+      # - run:
+      #       name: Install dependencies
+      #       command: npm install -g npm@8.15.0 && npm install --force
+      - run:
+          command: |
+            echo "Digest is: $(</tmp/digest.txt)"
+  deploy:
+    executor: docker/docker
+    steps:
+      # Please add $SSH_KEY_FINGERPRINT, $DEPLOYED_USER@ and DEPLOYED_SERVER to project's environment
+      - add_ssh_keys:
+          fingerprints:
+            - $SSH_KEY_FINGERPRINT
+      - run: ssh -oStrictHostKeyChecking=no $DEPLOYED_USER@$DEPLOYED_SERVER './deploy.sh'
+
+workflows:
+  my-pipeline:
+    jobs:
+      # - node/test
+      - build-and-push:
+          # requires:
+            # - node/test
+          filters:
+            branches:
+              only:
+                - main
+      # uncomment the 3 following lines to enable deploying
+      # - deploy:
+      #     requires:
+      #       - build-and-push

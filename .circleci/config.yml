@@ -1,57 +1,30 @@
-# my config
 version: 2.1
-orbs:
-  #node: circleci/node@5.1.0
-  docker: circleci/docker@2.4.0
-
-jobs:
-  build-and-push:
+job:
+  build_test:
     docker:
-      - image: node:14
-    environment:
-      DOCKER_IMAGE: lennguyen03/react-docker
-      DOCKER_TAG: latest
-    executor: docker/docker
+      - image: circleci/node:12
     steps:
-      - setup_remote_docker
       - checkout
-      - docker/check:
-          docker-username: DOCKER_USER
-          docker-password: DOCKER_PASSWORD
-      - docker/build:
-          image: $DOCKER_IMAGE
-          tag: $DOCKER_TAG
-      - docker/push:
-          digest-path: /tmp/digest.txt
-          image: $DOCKER_IMAGE
-          tag: $DOCKER_TAG
       - run:
-            name: Install dependencies
-            command: npm install -g npm@8.15.0 && npm install --force
-      - run:
+          name: Install npm dependencies
           command: |
-            echo "Digest is: $(</tmp/digest.txt)"
-  deploy:
-    executor: docker/docker
-    steps:
-      # Please add $SSH_KEY_FINGERPRINT, $DEPLOYED_USER@ and DEPLOYED_SERVER to project's environment
-      - add_ssh_keys:
-          fingerprints:
-            - $SSH_KEY_FINGERPRINT
-      - run: ssh -oStrictHostKeyChecking=no $DEPLOYED_USER@$DEPLOYED_SERVER './deploy.sh'
+            npm install --save
+    build_docker_image:
+      docker:
+        - image: circleci/node:12
+      steps:
+        - checkout
+        - setup_remote_docker:
+            docker_layer_caching: false
+        - run:
+            name: Build docker image
+            command: |
+              docker build -t lennguyen03/react-cicd-test .
+              echo $DOCKER_PASSWORD | docker login -u lennguyen03 -- password-stdin
+              docker push lennguyen03/react-cicd-test:latest
 
 workflows:
-  my-pipeline:
+  build_test:
     jobs:
-      # - node/test
-      - build-and-push:
-          # requires:
-            # - node/test
-          filters:
-            branches:
-              only:
-                - main
-      # uncomment the 3 following lines to enable deploying
-      # - deploy:
-      #     requires:
-      #       - build-and-push
+      - build_test
+      - build_docker_image
