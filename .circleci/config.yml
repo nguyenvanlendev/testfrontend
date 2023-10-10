@@ -5,11 +5,9 @@ orbs:
   docker: circleci/docker@1.4.0
 
 jobs:
-  build:
+  build-and-push:
     docker:
       - image: node:14
-
-  build-and-push:
     environment:
       DOCKER_IMAGE: lennguyen03/react-docker
       DOCKER_TAG: latest
