@@ -32,20 +32,16 @@ jobs:
       - run:
           name: Build docker image
           command: |
-            docker build -t lennguyen03/react-cicd-test .
+            docker build -t lennguyen03/react-cicd-test:v1 .
 
 
 
 # Job số 3 là đặt build dọcer image
   push_docker_image_to_dockerhub:
-    docker:
-      - image: circleci/node:12
     # Các bước mà nó sẽ thực hiện trong job số 3
     steps:
       - checkout
       # Chuẩn bị môi trường Docker để build docker images
-      - setup_remote_docker:
-          docker_layer_caching: true
       # Chạy câu lệnh gì 
       - run:
           name: Push docker image to docker hub
