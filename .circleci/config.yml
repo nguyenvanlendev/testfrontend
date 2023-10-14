@@ -33,16 +33,6 @@ jobs:
           name: Build docker image
           command: |
             docker build -t lennguyen03/react-cicd-test:v1 .
-
-
-
-# Job số 3 là đặt build dọcer image
-  push_docker_image_to_dockerhub:
-    # Các bước mà nó sẽ thực hiện trong job số 3
-    steps:
-      - checkout
-      # Chuẩn bị môi trường Docker để build docker images
-      # Chạy câu lệnh gì 
       - run:
           name: Push docker image to docker hub
           command: |
@@ -55,4 +45,3 @@ workflows:
     jobs:
       - build_dependencies
       - build_docker_image
-      - push_docker_image_to_dockerhub
